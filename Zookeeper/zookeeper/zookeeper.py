@@ -1,5 +1,5 @@
 camel = r"""
-Switching on the camera in the camel habitat...
+Switching on camera from habitat with camels...
  ___.-''''-.
 /___  @    |
 ',,,,.     |         _.'''''''._
@@ -13,14 +13,14 @@ Switching on the camera in the camel habitat...
               ! ; !'',,,',',,,,'!  ;   ;:
              : ;  ! !       ! ! ;  ;   :;
              ; ;   ! !      ! !  ; ;   ;,
-            ; ;    ! !     ! !   ; ;
+            ; ;    ! !     ! !   ; ;     
             ; ;    ! !    ! !     ; ;
            ;,,      !,!   !,!     ;,;
            /_I      L_I   L_I     /_I
-Look at that! Our little camel is sunbathing!"""
+Yey, our little camel is sunbathing!"""
 
 lion = r"""
-Switching on the camera in the lion habitat...
+Switching on camera from habitat with lions...
                                                ,w.
                                              ,YWMMw  ,M  ,
                         _.---.._   __..---._.'MMMMMw,wMWmW,
@@ -35,10 +35,10 @@ WMMm__,-'.'     /      _.\      F'''-+,,   ;_,_.dMMMMMMMM[,_ / `=_}
           /  .'             /  (       .'  /     Ww._     `.  `"
          /  Y,              `,  `-,=,_{   ;      MMMP`""-,  `-._.-,
         (--, )                `,_ / `) \/"")      ^"      `-, -;"\:
-The lion is roaring!"""
+The lion is croaking!"""
 
 deer = r"""
-Switching on the camera in the deer habitat...
+Switching on camera from habitat with deers...
    /|       |\
 `__\\       //__'
    ||      ||
@@ -66,8 +66,7 @@ Switching on the camera in the deer habitat...
 Our 'Bambi' looks hungry. Let's go to feed it!"""
 
 goose = r"""
-Switching on the camera in the goose habitat...
-
+Switching on camera from habitat with lovely goose...
                                     _
                                 ,-"" "".
                               ,'  ____  `.
@@ -79,10 +78,10 @@ Switching on the camera in the goose habitat...
   <`-       (__< <           :
    (__        (_<_<          ;
     `------------------------------------------
-The goose is staring intently at you... Maybe it's time to change the channel?"""
+This bird stares intently at you... (Maybe it's time to change the channel?)"""
 
 bat = r"""
-Switching on the camera in the bat habitat...
+Switching on camera from habitat with bats...
 _________________               _________________
  ~-.              \  |\___/|  /              .-~
      ~-.           \ / o o \ /           .-~
@@ -94,10 +93,10 @@ _________________               _________________
            /___      /\   /\      ___\
                 ~-. /  \_/  \ .-~
                    V         V
-This bat looks like it's doing fine."""
+It looks like this bat is fine."""
 
 rabbit = r"""
-Switching on the camera in the rabbit habitat...
+Switching on camera from habitat with rabbits...
          ,
         /|      __
        / |   ,-~ /
@@ -113,22 +112,22 @@ Switching on the camera in the rabbit habitat...
  /| ;-"~ _  l
 / l/ ,-"~    \
 \//\/      .- \
- Y        /    Y
+ Y        /    Y 
  l       I     !
  ]\      _\    /"\
 (" ~----( ~   Y.  )
-It looks like we will soon have more rabbits!"""
+It seems there will be more rabbits soon!"""
 
+# Author Deric San Andres
+# Zookeper Project by JetBrains
 
 animals = [camel, lion, deer, goose, bat, rabbit]
-# write your code here
-loopCheck = True
-while loopCheck == True:
-   x = (input("Which habitat # do you need? > "))
-   if x == 'exit':
-      print("See you later!")
-      loopCheck = False
-      exit
+done = True
+
+while(done):
+   choice = input("Which habitat # do you need?")
+   if choice != "exit":
+      print(animals[int(choice)])
    else:
-      y = int(x)
-      print(animals[y])
+      print("See you!")
+      done = False
